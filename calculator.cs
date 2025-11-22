@@ -4,43 +4,43 @@ class SimpleCalculator
 {
     static void Main()
     {
-        Console.WriteLine("Простой калькулятор");
-        Console.WriteLine("Поддерживаемые операции: +, -, *, /\n");
+        Console.WriteLine("ГЏГ°Г®Г±ГІГ®Г© ГЄГ Г«ГјГЄГіГ«ГїГІГ®Г°");
+        Console.WriteLine("ГЏГ®Г¤Г¤ГҐГ°Г¦ГЁГўГ ГҐГ¬Г»ГҐ Г®ГЇГҐГ°Г Г¶ГЁГЁ: +, -, *, /\n");
 
         Calculate();
 
-        Console.WriteLine("\nНажмите любую клавишу для выхода...");
-        Console.ReadKey();
+        Console.WriteLine("\nГЌГ Г¦Г¬ГЁГІГҐ Г«ГѕГЎГіГѕ ГЄГ«Г ГўГЁГёГі Г¤Г«Гї ГўГ»ГµГ®Г¤Г ...");
+        Console.Readline();
     }
 
     static void Calculate()
     {
-        Console.Write("Введите первое число: ");
+        Console.Write("Г‚ГўГҐГ¤ГЁГІГҐ ГЇГҐГ°ГўГ®ГҐ Г·ГЁГ±Г«Г®: ");
         if (!double.TryParse(Console.ReadLine(), out double num1))
         {
-            Console.WriteLine("Ошибка: Введено некорректное число!");
+            Console.WriteLine("ГЋГёГЁГЎГЄГ : Г‚ГўГҐГ¤ГҐГ­Г® Г­ГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ Г·ГЁГ±Г«Г®!");
             return;
         }
 
-        Console.Write("Введите операцию (+, -, *, /): ");
+        Console.Write("Г‚ГўГҐГ¤ГЁГІГҐ Г®ГЇГҐГ°Г Г¶ГЁГѕ (+, -, *, /): ");
         string operation = Console.ReadLine();
 
         if (operation != "+" && operation != "-" && operation != "*" && operation != "/")
         {
-            Console.WriteLine("Ошибка: Недопустимая операция!");
+            Console.WriteLine("ГЋГёГЁГЎГЄГ : ГЌГҐГ¤Г®ГЇГіГ±ГІГЁГ¬Г Гї Г®ГЇГҐГ°Г Г¶ГЁГї!");
             return;
         }
 
-        Console.Write("Введите второе число: ");
+        Console.Write("Г‚ГўГҐГ¤ГЁГІГҐ ГўГІГ®Г°Г®ГҐ Г·ГЁГ±Г«Г®: ");
         if (!double.TryParse(Console.ReadLine(), out double num2))
         {
-            Console.WriteLine("Ошибка: Введено некорректное число!");
+            Console.WriteLine("ГЋГёГЁГЎГЄГ : Г‚ГўГҐГ¤ГҐГ­Г® Г­ГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ Г·ГЁГ±Г«Г®!");
             return;
         }
 
         if (operation == "/" && num2 == 0)
         {
-            Console.WriteLine("Ошибка: Деление на ноль!");
+            Console.WriteLine("ГЋГёГЁГЎГЄГ : Г„ГҐГ«ГҐГ­ГЁГҐ Г­Г  Г­Г®Г«Гј!");
             return;
         }
 
@@ -62,6 +62,7 @@ class SimpleCalculator
                 break;
         }
 
-        Console.WriteLine($"\nРезультат: {num1} {operation} {num2} = {result}");
+        Console.WriteLine($"\nГђГҐГ§ГіГ«ГјГІГ ГІ: {num1} {operation} {num2} = {result}");
     }
+
 }
